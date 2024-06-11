@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    max-width: 1200px ;
+    margin : 0 auto;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wrapper h1{
+    margin: 20px auto;
+    text-align: center;
+    font-size: 40px;
+    color: #333333;
+}
+
+.card
+{
+    width: 32%;
+    overflow: hidden;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position:relative ;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale();
+    object-fit: cover;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px #333);
+}
+
+.card:hover img{
+    filter: grayscale(0);
+}
+
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    width: 100px;;
+    height: 10%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    color: #0d0d0d;
+    padding: 25px;
+    opacity: 0;
+    text-align: center;
+    font-weight: 700px;
+    font-size: 20px;
+
+}
+
+.card:hover figcaption{
+    opacity: 1;
+    transform: translateY(-10%) rotate(360deg);
+    transition: 0.5s;
+}
